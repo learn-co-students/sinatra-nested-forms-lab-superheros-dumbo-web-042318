@@ -1,3 +1,23 @@
+<h1><%= @params[:team][:name] %></h1>
+<h2>Team Motto: <%= @params[:team][:motto] %></h2>
+<% @params[:team][:members].each do |hero|%>
+  <h2>Hero Name: <%= hero[:name] %></h2>
+  <p>Hero Power: <%= hero[:power] %></p>
+  <p>Hero Biography: <%= hero[:bio] %></p>
+<% end %>
 
 
 
+<!-- => {"team"=>
+  {"name"=>"The Best",
+   "motto"=>"We are the best",
+   "members"=>
+    [{"name"=>"Bestie",
+      "power"=>"Friendship",
+      "bio"=>"Love it"},
+     {"name"=>"Bob",
+      "power"=>"Burst",
+      "bio"=>"Okay"},
+     {"name"=>"Blue",
+      "power"=>"Color",
+      "bio"=>"Blue!"}]}} -->
